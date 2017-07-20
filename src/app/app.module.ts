@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 
 import { routes } from './app.routes';
 import { RestaurantsService } from './restaurants/restaurants.service';
+import { ShoppingCartService } from './restaurant-detail/shopping-cart/shopping-cart.service';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -39,7 +40,8 @@ import { ReviewsComponent } from './restaurant-detail/reviews/reviews.component'
     RouterModule.forRoot(routes)
   ],
   providers: [
-    RestaurantsService
+    RestaurantsService,
+    ShoppingCartService
   ],
   bootstrap: [AppComponent]
 })
