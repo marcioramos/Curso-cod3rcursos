@@ -47,7 +47,8 @@ export class OrderService {
     headers.append('Content-Type', 'application/json');
 
     return this.http.post(`${url_api}/orders`, JSON.stringify(order), new RequestOptions({headers: headers}))
-    .map(response => response.json());
+    .map(response => response.json())
+    .map(order2 => order2.id);
   }
 
 }
