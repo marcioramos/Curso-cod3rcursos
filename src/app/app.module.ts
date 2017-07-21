@@ -7,6 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { routes } from './app.routes';
 import { RestaurantsService } from './restaurants/restaurants.service';
 import { ShoppingCartService } from './restaurant-detail/shopping-cart/shopping-cart.service';
+import { OrderService } from './order/order.service';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -51,6 +52,7 @@ import { OrderItemsComponent } from './order/order-items/order-items.component';
   providers: [
     RestaurantsService,
     ShoppingCartService,
+    OrderService,
     { provide: LOCALE_ID, useValue: 'pt-BR' }
   ],
   bootstrap: [AppComponent]
