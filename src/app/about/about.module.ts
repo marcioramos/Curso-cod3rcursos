@@ -9,7 +9,6 @@ const rotas: Routes = [
 
 @NgModule({
   imports: [
-    RouterModule,
     RouterModule.forChild(rotas)
   ],
   declarations: [
