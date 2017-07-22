@@ -5,7 +5,7 @@ import { RouterModule } from '@angular/router';
 
 import { routes } from './app.routes';
 import { SharedModule } from './shared/shared.module';
-import { CoreModule } from './core/core.module';
+// import { CoreModule } from './core/core.module';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -36,8 +36,8 @@ import { OrderSummaryComponent } from './order-summary/order-summary.component';
   imports: [
     BrowserModule,
     HttpModule,
-    SharedModule,
-    CoreModule,
+    SharedModule.forRoot(),
+    // CoreModule,
     RouterModule.forRoot(routes)
   ],
   providers: [
