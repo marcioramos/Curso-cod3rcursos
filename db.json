@@ -205,6 +205,14 @@
       "description": "Fatia de bolo de morango",
       "price": 5.9,
       "restaurantId": "tasty-treats"
+    },
+    {
+      "id": "cake",
+      "imagePath": "assets/img/foods/cake.png",
+      "name": "Fatia de Bolo 2",
+      "description": "Fatia de bolo de chocolate",
+      "price": 5.9,
+      "restaurantId": "tasty-treats"
     }
   ],
   "reviews": [
