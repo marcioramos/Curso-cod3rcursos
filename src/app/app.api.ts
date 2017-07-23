@@ -1,1 +1,3 @@
-export const url_api = 'http://localhost:3000';
+import { environment } from './../environments/environment';
+
+export const url_api = environment.api;
