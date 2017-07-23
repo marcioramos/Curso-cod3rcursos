@@ -12,7 +12,7 @@ import 'rxjs/add/operator/switchMap';
   templateUrl: './snackbar.component.html',
   styleUrls: ['./snackbar.component.css'],
   animations: [
-    trigger('sanck-visibility', [
+    trigger('snack-visibility', [
       state('hidden', style({
         opacity: 0,
         bottom: '0px'
@@ -29,26 +29,27 @@ import 'rxjs/add/operator/switchMap';
 export class SnackbarComponent implements OnInit {
 
   message = 'Hello there!';
-  sanckVisibility = 'hidden';
+  snackVisibility = 'hidden';
 
   constructor(private notificationService: NotificationService) { }
 
   ngOnInit() {
     // this.notificationService.notifier.subscribe(message => {
     //   this.message = message;
-    //   this.sanckVisibility = 'visible';
-    //   Observable.timer(3000).subscribe(timer => this.sanckVisibility = 'hidden');
+    //   this.snackVisibility = 'visible';
+    //   Observable.timer(3000).subscribe(timer => this.snackVisibility = 'hidden');
     // });
 
     this.notificationService.notifier.do(message => {
       this.message = message;
-      this.sanckVisibility = 'visible';
+      this.snackVisibility = 'visible';
     }).switchMap(message => Observable.timer(3000))
-    .subscribe(timer => this.sanckVisibility = 'hidden');
+    .subscribe(timer => this.snackVisibility = 'hidden');
+
   }
 
   // toggleSnack() {
-  //   this.sanckVisibility = this.sanckVisibility === 'hidden' ? 'visible' : 'hidden';
+  //   this.snackVisibility = this.snackVisibility === 'hidden' ? 'visible' : 'hidden';
   // }
 
 }
